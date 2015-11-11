@@ -6,7 +6,7 @@ import {DomainValidator} from "../src/DomainValidator.js"
 describe("DomainValidator", function() {
 	let validator = new DomainValidator()
 	
-    it ("validates valid domains", function() {
+    it ("passes Apache's DomainValidatorTest#testValidDomains", function() {
 		assert.ok(validator.isValid("apache.org"), "apache.org should validate")
 		assert.ok(validator.isValid("www.google.com"), "www.google.com should validate")
 
@@ -22,7 +22,7 @@ describe("DomainValidator", function() {
 		assert.ok(validator.isValid("i.have.an-example.domain.name"), "i.have.an-example.domain.name should validate")
     })
 	
-    it ("doesn't validate invalid domains", function() {
+    it ("passes Apache's DomainValidatorTest#testInvalidDomains", function() {
 		assert.notOk(validator.isValid(".org"), "bare TLD .org shouldn't validate")
 		assert.notOk(validator.isValid(" apache.org "), "domain name with spaces shouldn't validate")
 		assert.notOk(validator.isValid("apa che.org"), "domain name containing spaces shouldn't validate")
@@ -37,7 +37,7 @@ describe("DomainValidator", function() {
 		assert.notOk(validator.isValid(null), "Null shouldn't validate as domain name")
     })
 	
-    it ("correctly handles top level domains", function() {
+    it ("passes Apache's DomainValidatorTest#testTopLevelDomains", function() {
         // infrastructure TLDs
 		assert.ok(validator.isValidInfrastructureTld(".arpa"), ".arpa should validate as iTLD")
 		assert.notOk(validator.isValidInfrastructureTld(".com"), ".com shouldn't validate as iTLD")
@@ -60,15 +60,18 @@ describe("DomainValidator", function() {
 		assert.notOk(validator.isValid(null), "null shouldn't validate as TLD")
     })
 	
-    it ("supports IDN", function() {
+    it ("passes Apache's DomainValidatorTest#testIDN", function() {
 		assert.ok(validator.isValid("www.xn--bcher-kva.ch"), "b\u00fccher.ch in IDN should validate")
+    })
+	
+    it ("passes Apache's DomainValidatorTest#testIDNJava6OrLater", function() {
 		assert.ok(validator.isValid("www.b\u00fccher.ch"), "b\u00fccher.ch should validate")
 		assert.ok(validator.isValid("xn--d1abbgf6aiiy.xn--p1ai"), "xn--d1abbgf6aiiy.xn--p1ai should validate")
 		assert.ok(validator.isValid("президент.рф"), "президент.рф should validate")
 //		assert.notOk(validator.isValid("www.\uFFFD.ch"), "www.\uFFFD.ch FFFD should fail") // TODO: this test fails
-    })
+	})
 	
-    it ("follows RFC2396 for domain labels", function() {
+    it ("passes Apache's DomainValidatorTest#testRFC2396domainlabel", function() {
 		assert.ok(validator.isValid("a.ch"), "a.ch should validate")
 		assert.ok(validator.isValid("9.ch"), "9.ch should validate")
 		assert.ok(validator.isValid("az.ch"), "az.ch should validate")
@@ -78,7 +81,7 @@ describe("DomainValidator", function() {
 		assert.notOk(validator.isValid("-.ch"), "-.ch should not validate")
     })
 	
-    it ("follows RFC2396 for top labels", function() {
+    it ("passes Apache's DomainValidatorTest#testRFC2396toplabel", function() {
 		assert.ok(validator.extractTld("a.c"), "a.c (alpha) should validate")
 		assert.ok(validator.extractTld("a.cc"), "a.cc (alpha alpha) should validate")
 		assert.ok(validator.extractTld("a.c9"), "a.c9 (alpha alphanum) should validate")
@@ -91,7 +94,7 @@ describe("DomainValidator", function() {
 		assert.notOk(validator.extractTld("a.-9"), "a.-9 (- alphanum) should fail")
     })
 	
-    it ("follows RFC1123", function() {
+    it ("passes Apache's DomainValidatorTest#testDomainNoDots", function() {
 		assert.ok(validator.extractTld("a"), "a (alpha) should validate")
 //		assert.ok(validator.extractTld("9"), "9 (alphanum) should validate") // TODO: this test fails
 		assert.ok(validator.extractTld("c-z"), "c-z (alpha - alpha) should validate")
@@ -101,11 +104,11 @@ describe("DomainValidator", function() {
 		assert.notOk(validator.extractTld("-"), "- (-) should fail")
 	})
 	
-    it ("passes commons-validator test 297", function() {
+    it ("passes Apache's DomainValidatorTest#testValidator297", function() {
 		assert.ok(validator.isValid("xn--d1abbgf6aiiy.xn--p1ai"), "xn--d1abbgf6aiiy.xn--p1ai should validate")
 	})
 	
-    it ("passes commons-validator test 306", function() {
+    it ("passes Apache's DomainValidatorTest#testValidator306", function() {
 		let longString = "abcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyz0123456789A"
         expect(longString.length).to.be.equal(63) // 26 * 2 + 11
 		
