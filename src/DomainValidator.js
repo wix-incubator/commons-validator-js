@@ -4,68 +4,62 @@ import * as Domains from "./Domains.js"
 import _ from 'lodash'
 import * as punycode from 'punycode'
 
-let domainLabelRegex = "[a-zA-Z0-9](?:[a-zA-Z0-9\\-]{0,61}[a-zA-Z0-9])?"
-let topLabelRegex = "[a-zA-Z](?:[a-zA-Z0-9\\-]{0,61}[a-zA-Z0-9])?"
-let domainNameRegex = "^(?:" + domainLabelRegex + "\\.)*(" + topLabelRegex + ")\\.?$"
-
-let domainRegex = new RegExp(domainNameRegex)
-
-function chompLeadingDot(str) {
-	if (str[0] === ".") {
-		return str.substring(1)
+export class DomainValidator {
+	constructor() {
+		let domainLabelRegex = "[a-zA-Z0-9](?:[a-zA-Z0-9\\-]{0,61}[a-zA-Z0-9])?"
+		let topLabelRegex = "[a-zA-Z](?:[a-zA-Z0-9\\-]{0,61}[a-zA-Z0-9])?"
+		let domainNameRegex = "^(?:" + domainLabelRegex + "\\.)*(" + topLabelRegex + ")\\.?$"
+		this._domainRegex = new RegExp(domainNameRegex)
 	}
-	return str
-}
-
-function unicodeToASCII(input) {
-	return punycode.toASCII(input);
-}
-
-function arrayContains(sortedArray, key) {
-	// TODO: use binary search
-	return _.includes(sortedArray, key)
-}
-
-export function isValidCountryCodeTld(ccTld) {
-	let key = chompLeadingDot(unicodeToASCII(ccTld).toLowerCase())
-	return arrayContains(Domains.countryCodeTlds, key)
-}
-
-export function isValidGenericTld(gTld) {
-	let key = chompLeadingDot(unicodeToASCII(gTld).toLowerCase())
-	return arrayContains(Domains.genericTlds, key)
-}
-
-export function isValidInfrastructureTld(iTld) {
-	let key = chompLeadingDot(unicodeToASCII(iTld).toLowerCase())
-	return arrayContains(Domains.infrastructureTlds, key)
-}
-
-export function isValidTld(tld) {
-	tld = unicodeToASCII(tld)
-	return isValidInfrastructureTld(tld) || isValidGenericTld(tld) || isValidCountryCodeTld(tld)
-}
-
-export function extractTld(domain) {
-	if (!domain) {
-		return false
+	_chompLeadingDot(str) {
+		if (str[0] === ".") {
+			return str.substring(1)
+		}
+		return str
 	}
-	
-	domain = unicodeToASCII(domain)
-	if (domain.length > 253) {
-		return false
+	_unicodeToASCII(input) {
+		return punycode.toASCII(input);
 	}
-	let groups = domain.match(domainRegex)
-	if (groups) {
-		return groups[1]
+	_arrayContains(sortedArray, key) {
+		// TODO: use binary search
+		return _.includes(sortedArray, key)
 	}
-	return null
-}
-
-export function isValid(domain) {
-	let tld = extractTld(domain)
-	if (!tld) {
+	isValidCountryCodeTld(ccTld) {
+		let key = this._chompLeadingDot(this._unicodeToASCII(ccTld).toLowerCase())
+		return this._arrayContains(Domains.countryCodeTlds, key)
+	}
+	isValidGenericTld(gTld) {
+		let key = this._chompLeadingDot(this._unicodeToASCII(gTld).toLowerCase())
+		return this._arrayContains(Domains.genericTlds, key)
+	}
+	isValidInfrastructureTld(iTld) {
+		let key = this._chompLeadingDot(this._unicodeToASCII(iTld).toLowerCase())
+		return this._arrayContains(Domains.infrastructureTlds, key)
+	}
+	isValidTld(tld) {
+		tld = this._unicodeToASCII(tld)
+		return this.isValidInfrastructureTld(tld) || this.isValidGenericTld(tld) || this.isValidCountryCodeTld(tld)
+	}
+	extractTld(domain) {
+		if (!domain) {
+			return false
+		}
+		
+		domain = this._unicodeToASCII(domain)
+		if (domain.length > 253) {
+			return false
+		}
+		let groups = domain.match(this._domainRegex)
+		if (groups) {
+			return groups[1]
+		}
 		return null
 	}
-	return isValidTld(tld)
+	isValid(domain) {
+		let tld = this.extractTld(domain)
+		if (!tld) {
+			return null
+		}
+		return this.isValidTld(tld)
+	}
 }
