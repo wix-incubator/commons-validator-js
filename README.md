@@ -2,7 +2,7 @@
 
 [![NPM version][npm-image]][npm-url] [![Downloads][downloads-image]][npm-url]
 
-JavaScript port of [Apache Commons Validator][commons-validator-url].
+JavaScript port of [Apache Commons Validator](https://commons.apache.org/proper/commons-validator/).
 
 ### Usage
 Install the library with `npm install commons-validator-js`
@@ -14,8 +14,6 @@ var validator = new EmailValidator();
 validator.isValid('chuck.norris@gmail.com'); //=> true
 validator.isValid('chuck.norris@gmail.con'); //=> false (can your validator do this?)
 ```
-
-[commons-validator-url]: https://commons.apache.org/proper/commons-validator/
 
 [downloads-image]: https://img.shields.io/npm/dm/commons-validator-js.svg
 
