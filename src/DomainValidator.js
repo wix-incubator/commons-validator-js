@@ -1,14 +1,14 @@
 "use strict"
 
-import * as Domains from "./Domains.js"
+import * as Domains from "./Domains"
 import _ from 'lodash'
 import * as punycode from 'punycode'
 
 export class DomainValidator {
 	constructor() {
-		let domainLabelRegex = "[a-zA-Z0-9](?:[a-zA-Z0-9\\-]{0,61}[a-zA-Z0-9])?"
-		let topLabelRegex = "[a-zA-Z](?:[a-zA-Z0-9\\-]{0,61}[a-zA-Z0-9])?"
-		let domainNameRegex = "^(?:" + domainLabelRegex + "\\.)*(" + topLabelRegex + ")\\.?$"
+		const domainLabelRegex = "[a-zA-Z0-9](?:[a-zA-Z0-9\\-]{0,61}[a-zA-Z0-9])?"
+		const topLabelRegex = "[a-zA-Z](?:[a-zA-Z0-9\\-]{0,61}[a-zA-Z0-9])?"
+		const domainNameRegex = "^(?:" + domainLabelRegex + "\\.)*(" + topLabelRegex + ")\\.?$"
 		this._domainRegex = new RegExp(domainNameRegex)
 	}
 	_chompLeadingDot(str) {
@@ -25,15 +25,15 @@ export class DomainValidator {
 		return _.includes(sortedArray, key)
 	}
 	isValidCountryCodeTld(ccTld) {
-		let key = this._chompLeadingDot(this._unicodeToASCII(ccTld).toLowerCase())
+		const key = this._chompLeadingDot(this._unicodeToASCII(ccTld).toLowerCase())
 		return this._arrayContains(Domains.countryCodeTlds, key)
 	}
 	isValidGenericTld(gTld) {
-		let key = this._chompLeadingDot(this._unicodeToASCII(gTld).toLowerCase())
+		const key = this._chompLeadingDot(this._unicodeToASCII(gTld).toLowerCase())
 		return this._arrayContains(Domains.genericTlds, key)
 	}
 	isValidInfrastructureTld(iTld) {
-		let key = this._chompLeadingDot(this._unicodeToASCII(iTld).toLowerCase())
+		const key = this._chompLeadingDot(this._unicodeToASCII(iTld).toLowerCase())
 		return this._arrayContains(Domains.infrastructureTlds, key)
 	}
 	isValidTld(tld) {
@@ -49,14 +49,14 @@ export class DomainValidator {
 		if (domain.length > 253) {
 			return false
 		}
-		let groups = domain.match(this._domainRegex)
+		const groups = domain.match(this._domainRegex)
 		if (groups) {
 			return groups[1]
 		}
 		return null
 	}
 	isValid(domain) {
-		let tld = this.extractTld(domain)
+		const tld = this.extractTld(domain)
 		if (!tld) {
 			return null
 		}

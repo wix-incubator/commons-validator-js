@@ -1,18 +1,18 @@
 "use strict"
 
-import {DomainValidator} from "./DomainValidator.js"
+import {DomainValidator} from "./DomainValidator"
 
 export class EmailValidator {
 	constructor() {
-		//let specialChars = "\\p{Cntrl}\\(\\)<>@,;:'\\\\\\\"\\.\\[\\]" // TODO: \\p{Cntrl}
-		let specialChars = "\\(\\)<>@,;:'\\\\\\\"\\.\\[\\]"
-		let validChars = "[^\\s" + specialChars + "]"
-		let quotedUser = "(\"[^\"]*\")"
-		let word = "((" + validChars + "|')+|" + quotedUser + ")"
-		let userRegex = "^\\s*" + word + "(\\." + word + ")*$"
+		//const specialChars = "\\p{Cntrl}\\(\\)<>@,;:'\\\\\\\"\\.\\[\\]" // TODO: \\p{Cntrl}
+		const specialChars = "\\(\\)<>@,;:'\\\\\\\"\\.\\[\\]"
+		const validChars = "[^\\s" + specialChars + "]"
+		const quotedUser = "(\"[^\"]*\")"
+		const word = "((" + validChars + "|')+|" + quotedUser + ")"
+		const userRegex = "^\\s*" + word + "(\\." + word + ")*$"
 		this._userPattern = new RegExp(userRegex)
 
-		let emailRegex = "^\\s*?(.+)@(.+?)\\s*$"
+		const emailRegex = "^\\s*?(.+)@(.+?)\\s*$"
 		this._emailPattern = new RegExp(emailRegex)
 		
 		this._domainValidator = new DomainValidator()
@@ -36,7 +36,7 @@ export class EmailValidator {
 			return false
 		}
 		
-		let groups = email.match(this._emailPattern)
+		const groups = email.match(this._emailPattern)
 		if (!groups) {
 			return false
 		}
