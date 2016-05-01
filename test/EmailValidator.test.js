@@ -120,7 +120,7 @@ describe("EmailValidator", () => {
     it ("passes Apache's EmailValidatorTest#testEmailWithSlashes", () => {
        assert.ok(
              validator.isValid("joe!/blow@apache.org"),
-			 "/ and ! valid in username",
+			 "/ and ! valid in username"
        )
        assert.notOk(
              validator.isValid("joe@ap/ache.org"),
