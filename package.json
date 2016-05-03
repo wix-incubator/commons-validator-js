@@ -5,7 +5,7 @@
   "main": "dist/index.js",
   "scripts": {
     "test": "mocha --compilers js:babel-register",
-    "prepublish": "npm test && webpack",
+    "prepublish": "npm test && babel src --out-dir dist",
     "build": ":",
     "release": "wnpm-release -- --no-shrinkwrap"
   },
@@ -26,7 +26,7 @@
   },
   "homepage": "https://github.com/wix/commons-validator-js",
   "devDependencies": {
-    "babel": "^6.5.2",
+    "babel-cli": "^6.7.7",
     "babel-core": "^6.7.4",
     "babel-loader": "^6.2.4",
     "babel-plugin-transform-strict-mode": "^6.6.5",
@@ -34,15 +34,14 @@
     "babel-register": "^6.7.2",
     "chai": "^3.5.0",
     "mocha": "^2.4.5",
-    "webpack": "^1.12.13",
-    "punycode": "^1.4.0",
-    "lodash": "^3.10.1",
     "@wix/wnpm-ci": "*"
   },
   "publishConfig": {
     "registry": "https://registry.npmjs.org/"
   },
   "dependencies": {
+    "punycode": "^1.4.0",
+    "lodash": "^3.10.1"
   },
   "directories": {
     "test": "test"
