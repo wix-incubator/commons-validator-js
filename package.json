@@ -37,7 +37,7 @@
   },
   "optionalDependencies": {
     "@wix/wnpm-ci": "*",
-    "@wix/bower-auto-release": "*"
+    "bower-auto-release": "*"
   },
   "publishConfig": {
     "registry": "https://registry.npmjs.org/"
