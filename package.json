@@ -1,12 +1,12 @@
 {
   "name": "commons-validator-js",
-  "version": "1.0.74",
+  "version": "1.0.78",
   "description": "JavaScript port of Apache Commons Validator",
   "main": "dist/index.js",
   "scripts": {
     "test": "mocha --compilers js:babel-register",
     "prepublish": "npm test && babel src --out-dir dist",
-    "build": "babel src --out-dir dist",
+    "build": "webpack --optimize-minimize --output-library CommonsValidator --output-library-target var dist dist/commons-validator-js.js",
     "release": "wnpm-release -- --no-shrinkwrap && bower-auto-release"
   },
   "repository": {
@@ -37,7 +37,8 @@
   },
   "optionalDependencies": {
     "@wix/wnpm-ci": "*",
-    "bower-auto-release": "*"
+    "bower-auto-release": "*",
+    "webpack": "^1.13.0"
   },
   "publishConfig": {
     "registry": "https://registry.npmjs.org/"
