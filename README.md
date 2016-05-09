@@ -5,7 +5,7 @@
 JavaScript port of [Apache Commons Validator](https://commons.apache.org/proper/commons-validator/).
 
 ### Usage
-Install the library with `npm install commons-validator-js`
+Install the library with `npm install commons-validator-js` or with `bower install commons-validator-js --save`
 
 ```javascript
 var EmailValidator = require('commons-validator-js').EmailValidator;
