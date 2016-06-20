@@ -6,8 +6,8 @@
   "scripts": {
     "test": "mocha --compilers js:babel-register",
     "prepublish": "npm test && babel src --out-dir dist",
-    "build": "webpack --optimize-minimize --output-library CommonsValidator --output-library-target var dist dist/commons-validator-js.js",
-    "release": "wnpm-release -- --no-shrinkwrap && bower-auto-release"
+    "build": "webpack --optimize-minimize --output-library CommonsValidator --output-library-target var dist bin/commons-validator-js.js",
+    "release": "wnpm-release -- --no-shrinkwrap && bower-auto-release --dist bin"
   },
   "repository": {
     "type": "git",
