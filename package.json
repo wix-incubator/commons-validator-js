@@ -1,6 +1,6 @@
 {
   "name": "commons-validator-js",
-  "version": "1.0.123",
+  "version": "1.0.124",
   "description": "JavaScript port of Apache Commons Validator",
   "main": "dist/index.js",
   "scripts": {
