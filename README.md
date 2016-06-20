@@ -1,6 +1,6 @@
 # commons-validator-js
 
-[![NPM version][npm-image]][npm-url] [![Downloads][downloads-image]][npm-url]
+[![NPM version][npm-image]][npm-url]  ![Bower version](https://img.shields.io/bower/v/bootstrap.svg) [![Downloads][downloads-image]][npm-url]
 
 JavaScript port of [Apache Commons Validator](https://commons.apache.org/proper/commons-validator/).
 
@@ -20,3 +20,4 @@ This library can also be installed using `bower install commons-validator-js`. O
 
 [npm-url]: https://npmjs.org/package/commons-validator-js
 [npm-image]: https://img.shields.io/npm/v/commons-validator-js.svg
+
