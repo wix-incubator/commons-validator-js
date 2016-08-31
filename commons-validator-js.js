@@ -91,7 +91,15 @@ var CommonsValidator =
 	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 	
 	var DomainValidator = exports.DomainValidator = function () {
+		/**
+	  * @param allowLocal   Should local addresses be considered valid?
+	  */
 		function DomainValidator() {
+			var _ref = arguments.length <= 0 || arguments[0] === undefined ? {} : arguments[0];
+	
+			var _ref$allowLocal = _ref.allowLocal;
+			var allowLocal = _ref$allowLocal === undefined ? false : _ref$allowLocal;
+	
 			_classCallCheck(this, DomainValidator);
 	
 			var domainLabelRegex = "[a-zA-Z0-9](?:[a-zA-Z0-9\\-]{0,61}[a-zA-Z0-9])?";
@@ -163,11 +171,20 @@ var CommonsValidator =
 		}, {
 			key: "isValid",
 			value: function isValid(domain) {
-				var tld = this.extractTld(domain);
-				if (!tld) {
-					return null;
+				if (!domain) {
+					return false;
 				}
-				return this.isValidTld(tld);
+	
+				domain = this._unicodeToASCII(domain);
+				if (domain.length > 253) {
+					return false;
+				}
+				var groups = domain.match(this._domainRegex);
+				if (groups) {}
+				if (groups && groups.length > 1) {
+					return this.isValidTld(groups[1]) && groups[0] !== groups[1];
+				}
+				return false;
 			}
 		}]);
 	
@@ -18513,7 +18530,18 @@ var CommonsValidator =
 	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 	
 	var EmailValidator = exports.EmailValidator = function () {
+		/**
+	  * @param allowLocal   Should local addresses be considered valid?
+	  * @param allowTld     Should TLDs be allowed?
+	  */
 		function EmailValidator() {
+			var _ref = arguments.length <= 0 || arguments[0] === undefined ? {} : arguments[0];
+	
+			var _ref$allowLocal = _ref.allowLocal;
+			var allowLocal = _ref$allowLocal === undefined ? false : _ref$allowLocal;
+			var _ref$allowTld = _ref.allowTld;
+			var allowTld = _ref$allowTld === undefined ? false : _ref$allowTld;
+	
 			_classCallCheck(this, EmailValidator);
 	
 			//const specialChars = "\\p{Cntrl}\\(\\)<>@,;:'\\\\\\\"\\.\\[\\]" // TODO: \\p{Cntrl}
@@ -18527,13 +18555,18 @@ var CommonsValidator =
 			var emailRegex = "^\\s*?(.+)@(.+?)\\s*$";
 			this._emailPattern = new RegExp(emailRegex);
 	
-			this._domainValidator = new _DomainValidator.DomainValidator();
+			this._domainValidator = new _DomainValidator.DomainValidator({ allowLocal: allowLocal });
+			this._allowTld = allowTld;
 		}
 	
 		_createClass(EmailValidator, [{
 			key: "_isValidDomain",
 			value: function _isValidDomain(domain) {
-				return this._domainValidator.isValid(domain) || domain[0] !== "." && this._domainValidator.isValidTld(domain);
+				if (this._allowTld) {
+					return this._domainValidator.isValid(domain) || domain[0] !== "." && this._domainValidator.isValidTld(domain);
+				} else {
+					return this._domainValidator.isValid(domain);
+				}
 			}
 		}, {
 			key: "_isValidUser",
