@@ -247,6 +247,14 @@ describe("EmailValidator", () => {
         assert.ok(validator.isValid("john56789.john56789.john56789.john56789.john56789.john56789.john@example.com"))
 
         assert.notOk(validator.isValid("john56789.john56789.john56789.john56789.john56789.john56789.john5@example.com"))
+		
+        assert.ok(validator.isValid("\\>escape\\\\special\\^characters\\<@example.com"))
+
+        assert.ok(validator.isValid("Abc\\@def@example.com"))
+
+        assert.notOk(validator.isValid("Abc@def@example.com"))
+
+        assert.ok(validator.isValid("space\\ monkey@example.com"))
     })
 	
     it ("passes Apache's EmailValidatorTest#testValidator293", () => {

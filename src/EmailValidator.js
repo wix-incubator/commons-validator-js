@@ -6,7 +6,7 @@ export class EmailValidator {
 	constructor() {
 		//const specialChars = "\\p{Cntrl}\\(\\)<>@,;:'\\\\\\\"\\.\\[\\]" // TODO: \\p{Cntrl}
 		const specialChars = "\\(\\)<>@,;:'\\\\\\\"\\.\\[\\]"
-		const validChars = "[^\\s" + specialChars + "]"
+		const validChars = "(\\\\.)|[^\\s" + specialChars + "]"
 		const quotedUser = "(\"[^\"]*\")"
 		const word = "((" + validChars + "|')+|" + quotedUser + ")"
 		const userRegex = "^\\s*" + word + "(\\." + word + ")*$"
