@@ -18,7 +18,7 @@ export class EmailValidator {
 		this._domainValidator = new DomainValidator()
 	}
 	_isValidDomain(domain) {
-		return this._domainValidator.isValid(domain)
+		return this._domainValidator.isValid(domain) || ((domain[0] !== ".") && this._domainValidator.isValidTld(domain))
 	}
 	_isValidUser(user) {
 		if (!user || (user.length > 64)) {

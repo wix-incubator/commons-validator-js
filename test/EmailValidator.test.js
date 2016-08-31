@@ -292,6 +292,14 @@ describe("EmailValidator", () => {
                 "Maecenaspharetraeuismodmetusegetefficitur.Suspendisseamet@gmail.com"))
     })
 
+    it ("passes Apache's EmailValidatorTest#testEmailAtTLD", () => {
+        assert.ok(validator.isValid("test@com"))
+    })
+
+    it ("passes Apache's EmailValidatorTest#testValidator359", () => {
+        assert.notOk(validator.isValid("test@.com"))
+    })
+
     it ("passes Apache's EmailValidatorTest#testValidator374", () => {
         assert.ok(validator.isValid("abc@school.school"))
     })
