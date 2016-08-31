@@ -5,7 +5,10 @@ import _ from 'lodash'
 import * as punycode from 'punycode'
 
 export class DomainValidator {
-	constructor() {
+	/**
+	 * @param allowLocal   Should local addresses be considered valid?
+	 */
+	constructor({allowLocal = false} = {}) {
 		const domainLabelRegex = "[a-zA-Z0-9](?:[a-zA-Z0-9\\-]{0,61}[a-zA-Z0-9])?"
 		const topLabelRegex = "[a-zA-Z](?:[a-zA-Z0-9\\-]{0,61}[a-zA-Z0-9])?"
 		const domainNameRegex = "^(?:" + domainLabelRegex + "\\.)*(" + topLabelRegex + ")\\.?$"
@@ -56,10 +59,20 @@ export class DomainValidator {
 		return null
 	}
 	isValid(domain) {
-		const tld = this.extractTld(domain)
-		if (!tld) {
-			return null
+		if (!domain) {
+			return false
 		}
-		return this.isValidTld(tld)
+		
+		domain = this._unicodeToASCII(domain)
+		if (domain.length > 253) {
+			return false
+		}
+		const groups = domain.match(this._domainRegex)
+		if (groups) {
+		}
+		if (groups && groups.length > 1) {
+			return this.isValidTld(groups[1]) && (groups[0] !== groups[1])
+		}
+		return false
 	}
 }

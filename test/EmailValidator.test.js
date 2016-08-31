@@ -296,11 +296,23 @@ describe("EmailValidator", () => {
     })
 
     it ("passes Apache's EmailValidatorTest#testEmailAtTLD", () => {
-        assert.ok(validator.isValid("test@com"))
+		const val = new EmailValidator({
+			allowLocal: false,
+			allowTld: true
+		})
+        assert.ok(val.isValid("test@com"))
+    })
+	
+    it ("considers @TLD emails invalid", () => {
+        assert.notOk(validator.isValid("test@com"))
     })
 
     it ("passes Apache's EmailValidatorTest#testValidator359", () => {
-        assert.notOk(validator.isValid("test@.com"))
+		const val = new EmailValidator({
+			allowLocal: false,
+			allowTld: true
+		})
+        assert.notOk(val.isValid("test@.com"))
     })
 
     it ("passes Apache's EmailValidatorTest#testValidator374", () => {
