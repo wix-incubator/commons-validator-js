@@ -18518,7 +18518,7 @@ var CommonsValidator =
 	
 			//const specialChars = "\\p{Cntrl}\\(\\)<>@,;:'\\\\\\\"\\.\\[\\]" // TODO: \\p{Cntrl}
 			var specialChars = "\\(\\)<>@,;:'\\\\\\\"\\.\\[\\]";
-			var validChars = "[^\\s" + specialChars + "]";
+			var validChars = "(\\\\.)|[^\\s" + specialChars + "]";
 			var quotedUser = "(\"[^\"]*\")";
 			var word = "((" + validChars + "|')+|" + quotedUser + ")";
 			var userRegex = "^\\s*" + word + "(\\." + word + ")*$";
