@@ -18533,7 +18533,7 @@ var CommonsValidator =
 		_createClass(EmailValidator, [{
 			key: "_isValidDomain",
 			value: function _isValidDomain(domain) {
-				return this._domainValidator.isValid(domain);
+				return this._domainValidator.isValid(domain) || domain[0] !== "." && this._domainValidator.isValidTld(domain);
 			}
 		}, {
 			key: "_isValidUser",
