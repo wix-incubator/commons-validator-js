@@ -243,6 +243,9 @@ describe("EmailValidator", () => {
         assert.ok(validator.isValid("\"joe=\"@apache.org"))
 
         assert.ok(validator.isValid("\"..\"@apache.org"))
+		
+		// escaped quote character valid in quoted string
+        assert.ok(validator.isValid("\"john\\\"doe\"@apache.org"))
 
         assert.ok(validator.isValid("john56789.john56789.john56789.john56789.john56789.john56789.john@example.com"))
 

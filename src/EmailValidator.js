@@ -7,7 +7,7 @@ export class EmailValidator {
 		//const specialChars = "\\p{Cntrl}\\(\\)<>@,;:'\\\\\\\"\\.\\[\\]" // TODO: \\p{Cntrl}
 		const specialChars = "\\(\\)<>@,;:'\\\\\\\"\\.\\[\\]"
 		const validChars = "(\\\\.)|[^\\s" + specialChars + "]"
-		const quotedUser = "(\"[^\"]*\")"
+		const quotedUser = "(\"(\\\\\"|[^\"])*\")"
 		const word = "((" + validChars + "|')+|" + quotedUser + ")"
 		const userRegex = "^\\s*" + word + "(\\." + word + ")*$"
 		this._userPattern = new RegExp(userRegex)
