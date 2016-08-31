@@ -44,7 +44,7 @@
     "registry": "https://registry.npmjs.org/"
   },
   "dependencies": {
-    "punycode": "^1.4.0",
+    "punycode": "^2.0.0",
     "lodash": "^3.10.1"
   },
   "directories": {
