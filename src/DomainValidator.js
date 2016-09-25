@@ -1,7 +1,7 @@
 "use strict"
 
 import * as Domains from "./Domains"
-import _ from 'lodash'
+import includes from 'lodash.includes'
 import * as punycode from 'punycode'
 
 export class DomainValidator {
@@ -25,7 +25,7 @@ export class DomainValidator {
 	}
 	_arrayContains(sortedArray, key) {
 		// TODO: use binary search
-		return _.includes(sortedArray, key)
+		return includes(sortedArray, key)
 	}
 	isValidCountryCodeTld(ccTld) {
 		const key = this._chompLeadingDot(this._unicodeToASCII(ccTld).toLowerCase())
