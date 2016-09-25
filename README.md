@@ -17,10 +17,14 @@ validator.isValid('chuck.norris@gmail.con'); //=> false (can your validator do t
 
 ### Usage - bower
 Install the library and its dependencies: `bower install commons-validator-js`. 
-Reference the library and its dependencies: 
-  `bower_components/commons-validator-js/dist/commons-validator-js.js`
-  `bower_components/lodash/dist/lodash.js`
-  `bower_components/punycode/punycode.js`
+
+Reference the library and its dependencies:
+
+  `'bower_components/commons-validator-js/dist/commons-validator-js.js'`
+  
+  `'bower_components/lodash/dist/lodash.js'`
+  
+  `'bower_components/punycode/punycode.js'` 
 
 Then use the global constructor: `var EmailValidator = CommonsValidator.EmailValidator;` and proceed as shown in the npm usage example above.  
 
