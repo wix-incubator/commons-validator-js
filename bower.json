@@ -19,5 +19,9 @@
     "bower_components",
     "test",
     "tests"
-  ]
+  ],
+  "dependencies": {
+    "lodash": "^4.16.1",
+    "punycode": "^2.0.0"
+  }
 }

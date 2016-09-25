@@ -4,7 +4,7 @@
 
 JavaScript port of [Apache Commons Validator](https://commons.apache.org/proper/commons-validator/).
 
-### Usage
+### Usage - npm
 Install the library with `npm install commons-validator-js`
 
 ```javascript
@@ -14,7 +14,15 @@ var validator = new EmailValidator();
 validator.isValid('chuck.norris@gmail.com'); //=> true
 validator.isValid('chuck.norris@gmail.con'); //=> false (can your validator do this?)
 ```
-This library can also be installed using `bower install commons-validator-js`. Once you reference `bower_components/commons-validator-js/dist/commons-validator-js.js` you can then use the global variable `var EmailValidator = CommonsValidator.EmailValidator;` and proceed as shown in the npm example above.  
+
+### Usage - bower
+Install the library and its dependencies: `bower install commons-validator-js`. 
+Reference the library and its dependencies: 
+  `bower_components/commons-validator-js/dist/commons-validator-js.js`
+  `bower_components/lodash/dist/lodash.js`
+  `bower_components/punycode/punycode.js`
+
+Then use the global constructor: `var EmailValidator = CommonsValidator.EmailValidator;` and proceed as shown in the npm usage example above.  
 
 [downloads-image]: https://img.shields.io/npm/dm/commons-validator-js.svg
 

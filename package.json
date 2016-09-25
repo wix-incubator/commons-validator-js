@@ -6,7 +6,7 @@
   "scripts": {
     "test": "mocha --compilers js:babel-register",
     "compile": "babel -d dist/ src/",
-    "compile-library": "webpack --output-library CommonsValidator --output-library-target var dist bin/commons-validator-js.src.js",
+    "compile-library": "webpack --config webpack.config.js --output-library CommonsValidator --output-library-target var dist bin/commons-validator-js.src.js",
     "prepublish": "npm test && npm run compile && npm run compile-library",
     "build": "babel bin/commons-validator-js.src.js | uglifyjs > bin/commons-validator-js.js",
     "release": "wnpm-release -- --no-shrinkwrap && bower-auto-release --dist bin"
