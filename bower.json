@@ -21,7 +21,6 @@
     "tests"
   ],
   "dependencies": {
-    "lodash": "^4.16.1",
-    "punycode": "^2.0.0"
+    "lodash": "^4.16.1"
   }
 }
