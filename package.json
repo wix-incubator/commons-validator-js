@@ -6,8 +6,9 @@
   "scripts": {
     "test": "mocha --compilers js:babel-register",
     "compile": "babel -d dist/ src/",
-    "prepublish": "npm test && npm run compile",
-    "build": "webpack --optimize-minimize --output-library CommonsValidator --output-library-target var dist bin/commons-validator-js.js",
+    "compile-library": "webpack --output-library CommonsValidator --output-library-target var dist bin/commons-validator-js.src.js",
+    "prepublish": "npm test && npm run compile && npm run compile-library",
+    "build": "babel bin/commons-validator-js.src.js | uglifyjs > bin/commons-validator-js.js",
     "release": "wnpm-release -- --no-shrinkwrap && bower-auto-release --dist bin"
   },
   "repository": {
@@ -35,11 +36,13 @@
     "babel-register": "^6.8.0",
     "babel-runtime": "^6.6.1",
     "chai": "^3.5.0",
-    "mocha": "^3.0.2"
+    "mocha": "^3.0.2",
+    "uglifyjs": "^2.4.10"
   },
   "optionalDependencies": {
     "@wix/wnpm-ci": "*",
     "bower-auto-release": "*",
+    "uglify": "^0.1.5",
     "webpack": "^1.13.0"
   },
   "publishConfig": {
