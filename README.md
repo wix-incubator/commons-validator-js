@@ -16,7 +16,7 @@ validator.isValid('chuck.norris@gmail.con'); //=> false (can your validator do t
 ```
 
 ### Usage - bower
-Install the library and its dependencies: `bower install commons-validator-js`. 
+Install the library and its dependencies: `bower install commons-validator-js punycode lodash`. 
 
 Reference the library and its dependencies:
 
