@@ -16,15 +16,9 @@ validator.isValid('chuck.norris@gmail.con'); //=> false (can your validator do t
 ```
 
 ### Usage - bower
-Install the library and its dependencies: `bower install commons-validator-js lodash`. 
-
-Reference the library and its dependencies:
-
-  `'bower_components/commons-validator-js/dist/commons-validator-js.js'`
-  
-  `'bower_components/lodash/dist/lodash.js'`
-  
-
+Install the library: `bower install commons-validator-js`. 
+Add a reference: `'bower_components/commons-validator-js/dist/commons-validator-js.js'`
+   
 Then use the global constructor: `var EmailValidator = CommonsValidator.EmailValidator;` and proceed as shown in the npm usage example above.  
 
 [downloads-image]: https://img.shields.io/npm/dm/commons-validator-js.svg
