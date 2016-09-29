@@ -95,7 +95,7 @@ var CommonsValidator =
 	  * @param allowLocal   Should local addresses be considered valid?
 	  */
 		function DomainValidator() {
-			var _ref = arguments.length <= 0 || arguments[0] === undefined ? {} : arguments[0];
+			var _ref = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {};
 
 			var _ref$allowLocal = _ref.allowLocal;
 			var allowLocal = _ref$allowLocal === undefined ? false : _ref$allowLocal;
@@ -2530,7 +2530,7 @@ var CommonsValidator =
 	  * @param allowTld     Should TLDs be allowed?
 	  */
 		function EmailValidator() {
-			var _ref = arguments.length <= 0 || arguments[0] === undefined ? {} : arguments[0];
+			var _ref = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {};
 
 			var _ref$allowLocal = _ref.allowLocal;
 			var allowLocal = _ref$allowLocal === undefined ? false : _ref$allowLocal;
