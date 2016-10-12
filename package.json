@@ -9,7 +9,7 @@
     "compile-library": "webpack --output-library CommonsValidator --output-library-target var dist bin/commons-validator-js.src.js",
     "prepublish": "npm test && npm run compile && npm run compile-library",
     "build": "babel bin/commons-validator-js.src.js | uglifyjs > bin/commons-validator-js.js",
-    "release": "wnpm-release -- --no-shrinkwrap && bower-auto-release --dist bin"
+    "release": "npm install @wix/wnpm-ci && wnpm-release -- --no-shrinkwrap && npm install bower-auto-release && bower-auto-release --dist bin"
   },
   "repository": {
     "type": "git",
@@ -39,8 +39,6 @@
     "mocha": "^3.0.2"
   },
   "optionalDependencies": {
-    "@wix/wnpm-ci": "*",
-    "bower-auto-release": "*",
     "uglifyjs": "^2.4.10",
     "webpack": "^1.13.0"
   },
