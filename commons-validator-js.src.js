@@ -95,10 +95,9 @@ var CommonsValidator =
 	  * @param allowLocal   Should local addresses be considered valid?
 	  */
 		function DomainValidator() {
-			var _ref = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {};
-
-			var _ref$allowLocal = _ref.allowLocal;
-			var allowLocal = _ref$allowLocal === undefined ? false : _ref$allowLocal;
+			var _ref = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {},
+			    _ref$allowLocal = _ref.allowLocal,
+			    allowLocal = _ref$allowLocal === undefined ? false : _ref$allowLocal;
 
 			_classCallCheck(this, DomainValidator);
 
@@ -2638,12 +2637,11 @@ var CommonsValidator =
 	  * @param allowTld     Should TLDs be allowed?
 	  */
 		function EmailValidator() {
-			var _ref = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {};
-
-			var _ref$allowLocal = _ref.allowLocal;
-			var allowLocal = _ref$allowLocal === undefined ? false : _ref$allowLocal;
-			var _ref$allowTld = _ref.allowTld;
-			var allowTld = _ref$allowTld === undefined ? false : _ref$allowTld;
+			var _ref = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {},
+			    _ref$allowLocal = _ref.allowLocal,
+			    allowLocal = _ref$allowLocal === undefined ? false : _ref$allowLocal,
+			    _ref$allowTld = _ref.allowTld,
+			    allowTld = _ref$allowTld === undefined ? false : _ref$allowTld;
 
 			_classCallCheck(this, EmailValidator);
 
