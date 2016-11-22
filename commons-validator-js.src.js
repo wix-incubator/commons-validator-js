@@ -1660,6 +1660,7 @@ var CommonsValidator =
 	"xn--90ais", // ??? Reliable Software Inc.
 	"xn--clchc0ea0b2g2a9gcd", // சிங்கப்பூர் Singapore Network Information Centre (SGNIC) Pte Ltd
 	"xn--d1alf", // мкд Macedonian Academic Research Network Skopje
+	"xn--e1a4c", // ею EURid vzw/asbl
 	"xn--fiqs8s", // 中国 China Internet Network Information Center
 	"xn--fiqz9s", // 中國 China Internet Network Information Center
 	"xn--fpcrj9c3d", // భారత్ National Internet Exchange of India
@@ -1682,6 +1683,7 @@ var CommonsValidator =
 	"xn--mgbpl2fh", // ????? Sudan Internet Society
 	"xn--mgbtx2b", // عراق Communications and Media Commission (CMC)
 	"xn--mgbx4cd0ab", // مليسيا MYNIC Berhad
+	"xn--mix891f", // 澳門 Bureau of Telecommunications Regulation (DSRT)
 	"xn--node", // გე Information Technologies Development Center (ITDC)
 	"xn--o3cw4h", // ไทย Thai Network Information Center Foundation
 	"xn--ogbpf8fl", // سورية National Agency for Network Services (NANS)
