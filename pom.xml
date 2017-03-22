@@ -35,4 +35,7 @@
             </roles>
         </developer>
     </developers>	
+    <organization>
+        <name>Restaurants</name>
+    </organization>
 </project>
