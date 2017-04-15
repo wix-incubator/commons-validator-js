@@ -43,7 +43,7 @@ var CommonsValidator =
 /************************************************************************/
 /******/ ([
 /* 0 */
-/***/ function(module, exports, __webpack_require__) {
+/***/ (function(module, exports, __webpack_require__) {
 
 	"use strict";
 
@@ -59,9 +59,9 @@ var CommonsValidator =
 	exports.DomainValidator = _DomainValidator.DomainValidator;
 	exports.EmailValidator = _EmailValidator.EmailValidator;
 
-/***/ },
+/***/ }),
 /* 1 */
-/***/ function(module, exports, __webpack_require__) {
+/***/ (function(module, exports, __webpack_require__) {
 
 	"use strict";
 
@@ -190,9 +190,9 @@ var CommonsValidator =
 		return DomainValidator;
 	}();
 
-/***/ },
+/***/ }),
 /* 2 */
-/***/ function(module, exports) {
+/***/ (function(module, exports) {
 
 	"use strict";
 
@@ -1704,9 +1704,9 @@ var CommonsValidator =
 	"zm", // Zambia
 	"zw"];
 
-/***/ },
+/***/ }),
 /* 3 */
-/***/ function(module, exports) {
+/***/ (function(module, exports) {
 
 	/**
 	 * lodash (Custom Build) <https://lodash.com/>
@@ -2455,9 +2455,9 @@ var CommonsValidator =
 	module.exports = includes;
 
 
-/***/ },
+/***/ }),
 /* 4 */
-/***/ function(module, exports, __webpack_require__) {
+/***/ (function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_RESULT__;/* WEBPACK VAR INJECTION */(function(module, global) {/*! https://mths.be/punycode v1.4.1 by @mathias */
 	;(function(root) {
@@ -2993,9 +2993,9 @@ var CommonsValidator =
 
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(5)(module), (function() { return this; }())))
 
-/***/ },
+/***/ }),
 /* 5 */
-/***/ function(module, exports) {
+/***/ (function(module, exports) {
 
 	module.exports = function(module) {
 		if(!module.webpackPolyfill) {
@@ -3009,9 +3009,9 @@ var CommonsValidator =
 	}
 
 
-/***/ },
+/***/ }),
 /* 6 */
-/***/ function(module, exports, __webpack_require__) {
+/***/ (function(module, exports, __webpack_require__) {
 
 	"use strict";
 
@@ -3104,5 +3104,5 @@ var CommonsValidator =
 		return EmailValidator;
 	}();
 
-/***/ }
+/***/ })
 /******/ ]);
