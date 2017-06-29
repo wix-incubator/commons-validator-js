@@ -513,6 +513,7 @@ var CommonsValidator =
 	"dvag", // dvag Deutsche Vermögensberatung Aktiengesellschaft DVAG
 	"earth", // earth Interlink Co., Ltd.
 	"eat", // eat Charleston Road Registry Inc.
+	"eco", // eco Big Room Inc.
 	"edeka", // edeka EDEKA Verband kaufmännischer Genossenschaften e.V.
 	"edu", // edu EDUCAUSE
 	"education", // education Brice Way, LLC
