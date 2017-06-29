@@ -201,7 +201,7 @@ var CommonsValidator =
 	// WARNING: this array MUST be sorted, otherwise it cannot be searched reliably using binary search
 
 	Object.defineProperty(exports, "__esModule", {
-		value: true
+	    value: true
 	});
 	var infrastructureTlds = exports.infrastructureTlds = ["arpa"];
 
