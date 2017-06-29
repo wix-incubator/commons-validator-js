@@ -9,7 +9,7 @@ export const infrastructureTlds = [
 
 // WARNING: this array MUST be sorted, otherwise it cannot be searched reliably using binary search
 export const genericTlds = [
-    // Taken from Version 2016082201, Last Updated Tue Aug 23 07:07:02 2016 UTC
+    // Taken from Version 2017042500, Last Updated Tue Apr 25 07:07:02 2017 UTC
     "aaa", // aaa American Automobile Association, Inc.
     "aarp", // aarp AARP
     "abarth", // abarth Fiat Chrysler Automobiles N.V.
@@ -35,6 +35,7 @@ export const genericTlds = [
     "aetna", // aetna Aetna Life Insurance Company
     "afamilycompany", // afamilycompany Johnson Shareholdings, Inc.
     "afl", // afl Australian Football League
+    "africa", // africa ZA Central Registry NPC trading as Registry.Africa
     "agakhan", // agakhan Fondation Aga Khan (Aga Khan Foundation)
     "agency", // agency Steel Falls, LLC
     "aig", // aig American International Group, Inc.
@@ -61,6 +62,7 @@ export const genericTlds = [
     "android", // android Charleston Road Registry Inc.
     "anquan", // anquan QIHOO 360 TECHNOLOGY CO. LTD.
     "anz", // anz Australia and New Zealand Banking Group Limited
+    "aol", // aol AOL Inc.
     "apartments", // apartments June Maple, LLC
     "app", // app Charleston Road Registry Inc.
     "apple", // apple Apple Inc.
@@ -99,6 +101,8 @@ export const genericTlds = [
     "barclays", // barclays Barclays Bank PLC
     "barefoot", // barefoot Gallo Vineyards, Inc.
     "bargains", // bargains Half Hallow, LLC
+    "baseball", // baseball MLB Advanced Media DH, LLC
+    "basketball", // basketball Fédération Internationale de Basketball (FIBA)
     "bauhaus", // bauhaus Werkhaus GmbH
     "bayern", // bayern Bayern Connect GmbH
     "bbc", // bbc British Broadcasting Corporation
@@ -144,8 +148,10 @@ export const genericTlds = [
     "boots", // boots THE BOOTS COMPANY PLC
     "bosch", // bosch Robert Bosch GMBH
     "bostik", // bostik Bostik SA
+    "boston", // boston Boston TLD Management, LLC
     "bot", // bot Amazon Registry Services, Inc.
     "boutique", // boutique Over Galley, LLC
+    "box", // box NS1 Limited
     "bradesco", // bradesco Banco Bradesco S.A.
     "bridgestone", // bridgestone Bridgestone Corporation
     "broadway", // broadway Celebrate Broadway, Inc.
@@ -182,10 +188,13 @@ export const genericTlds = [
     "cars", // cars Uniregistry, Corp.
     "cartier", // cartier Richemont DNS Inc.
     "casa", // casa Top Level Domain Holdings Limited
+    "case", // case CNH Industrial N.V.
+    "caseih", // caseih CNH Industrial N.V.
     "cash", // cash Delta Lake, LLC
     "casino", // casino Binky Sky, LLC
     "cat", // cat Fundacio puntCAT
     "catering", // catering New Falls. LLC
+    "catholic", // catholic Pontificium Consilium de Comunicationibus Socialibus (PCCS) (Pontifical Council for Social Communication)
     "cba", // cba COMMONWEALTH BANK OF AUSTRALIA
     "cbn", // cbn The Christian Broadcasting Network, Inc.
     "cbre", // cbre CBRE, Inc.
@@ -257,6 +266,7 @@ export const genericTlds = [
     "cricket", // cricket dot Cricket Limited
     "crown", // crown Crown Equipment Corporation
     "crs", // crs Federated Co-operatives Limited
+    "cruise", // cruise Viking River Cruises (Bermuda) Ltd.
     "cruises", // cruises Spring Way, LLC
     "csc", // csc Alliance-One Services, Inc.
     "cuisinella", // cuisinella SALM S.A.S.
@@ -265,6 +275,7 @@ export const genericTlds = [
     "dabur", // dabur Dabur India Limited
     "dad", // dad Charleston Road Registry Inc.
     "dance", // dance United TLD Holdco Ltd.
+    "data", // data Dish DBS Corporation
     "date", // date dot Date Limited
     "dating", // dating Pine Fest, LLC
     "datsun", // datsun NISSAN MOTOR CO., LTD.
@@ -294,6 +305,7 @@ export const genericTlds = [
     "discount", // discount Holly Hill, LLC
     "discover", // discover Discover Financial Services
     "dish", // dish Dish DBS Corporation
+    "diy", // diy Lifestyle Domain Holdings, Inc.
     "dnp", // dnp Dai Nippon Printing Co., Ltd.
     "docs", // docs Charleston Road Registry Inc.
     "doctor", // doctor Brice Trail, LLC
@@ -301,7 +313,7 @@ export const genericTlds = [
     "dog", // dog Koko Mill, LLC
     "doha", // doha Communications Regulatory Authority (CRA)
     "domains", // domains Sugar Cross, LLC
-//            "doosan", // doosan Doosan Corporation (retired)
+//  "doosan", // doosan Doosan Corporation (retired)
     "dot", // dot Dish DBS Corporation
     "download", // download dot Support Limited
     "drive", // drive Charleston Road Registry Inc.
@@ -313,6 +325,7 @@ export const genericTlds = [
     "dupont", // dupont E. I. du Pont de Nemours and Company
     "durban", // durban ZA Central Registry NPC trading as ZA Central Registry
     "dvag", // dvag Deutsche Vermögensberatung Aktiengesellschaft DVAG
+    "dvr", // dvr Hughes Satellite Systems Corporation
     "earth", // earth Interlink Co., Ltd.
     "eat", // eat Charleston Road Registry Inc.
     "eco", // eco Big Room Inc.
@@ -359,6 +372,7 @@ export const genericTlds = [
     "ferrero", // ferrero Ferrero Trading Lux S.A.
     "fiat", // fiat Fiat Chrysler Automobiles N.V.
     "fidelity", // fidelity Fidelity Brokerage Services LLC
+    "fido", // fido Rogers Communications Canada Inc.
     "film", // film Motion Picture Domain Registry Pty Ltd
     "final", // final Núcleo de Informação e Coordenação do Ponto BR - NIC.br
     "finance", // finance Cotton Cypress, LLC
@@ -375,9 +389,10 @@ export const genericTlds = [
     "flir", // flir FLIR Systems, Inc.
     "florist", // florist Half Cypress, LLC
     "flowers", // flowers Uniregistry, Corp.
-//        "flsmidth", // flsmidth FLSmidth A/S retired 2016-07-22
+//  "flsmidth", // flsmidth FLSmidth A/S retired 2016-07-22
     "fly", // fly Charleston Road Registry Inc.
     "foo", // foo Charleston Road Registry Inc.
+    "food", // food Lifestyle Domain Holdings, Inc.
     "foodnetwork", // foodnetwork Lifestyle Domain Holdings, Inc.
     "football", // football Foggy Farms, LLC
     "ford", // ford Ford Motor Company
@@ -386,6 +401,7 @@ export const genericTlds = [
     "forum", // forum Fegistry, LLC
     "foundation", // foundation John Dale, LLC
     "fox", // fox FOX Registry, LLC
+    "free", // free Amazon Registry Services, Inc.
     "fresenius", // fresenius Fresenius Immobilien-Verwaltungs-GmbH
     "frl", // frl FRLregistry B.V.
     "frogans", // frogans OP3FT
@@ -394,6 +410,7 @@ export const genericTlds = [
     "ftr", // ftr Frontier Communications Corporation
     "fujitsu", // fujitsu Fujitsu Limited
     "fujixerox", // fujixerox Xerox DNHC LLC
+    "fun", // fun DotSpace, Inc.
     "fund", // fund John Castle, LLC
     "furniture", // furniture Lone Fields, LLC
     "futbol", // futbol United TLD Holdco, Ltd.
@@ -450,6 +467,7 @@ export const genericTlds = [
     "guide", // guide Snow Moon, LLC
     "guitars", // guitars Uniregistry, Corp.
     "guru", // guru Pioneer Cypress, LLC
+    "hair", // hair L&#39;Oreal
     "hamburg", // hamburg Hamburg Top-Level-Domain GmbH
     "hangout", // hangout Charleston Road Registry Inc.
     "haus", // haus United TLD Holdco, LTD.
@@ -478,10 +496,12 @@ export const genericTlds = [
     "honda", // honda Honda Motor Co., Ltd.
     "honeywell", // honeywell Honeywell GTLD LLC
     "horse", // horse Top Level Domain Holdings Limited
+    "hospital", // hospital Ruby Pike, LLC
     "host", // host DotHost Inc.
     "hosting", // hosting Uniregistry, Corp.
     "hot", // hot Amazon Registry Services, Inc.
     "hoteles", // hoteles Travel Reservations SRL
+    "hotels", // hotels Booking.com B.V.
     "hotmail", // hotmail Microsoft Corporation
     "house", // house Sugar Park, LLC
     "how", // how Charleston Road Registry Inc.
@@ -496,7 +516,7 @@ export const genericTlds = [
     "icu", // icu One.com A/S
     "ieee", // ieee IEEE Global LLC
     "ifm", // ifm ifm electronic gmbh
-    "iinet", // iinet Connect West Pty. Ltd.
+//  "iinet", // iinet Connect West Pty. Ltd. (Retired)
     "ikano", // ikano Ikano S.A.
     "imamat", // imamat Fondation Aga Khan (Aga Khan Foundation)
     "imdb", // imdb Amazon Registry Services, Inc.
@@ -523,6 +543,7 @@ export const genericTlds = [
     "istanbul", // istanbul Istanbul Metropolitan Municipality / Medya A.S.
     "itau", // itau Itau Unibanco Holding S.A.
     "itv", // itv ITV Services Limited
+    "iveco", // iveco CNH Industrial N.V.
     "iwc", // iwc Richemont DNS Inc.
     "jaguar", // jaguar Jaguar Land Rover Ltd
     "java", // java Oracle Corporation
@@ -531,6 +552,7 @@ export const genericTlds = [
     "jeep", // jeep FCA US LLC.
     "jetzt", // jetzt New TLD Company AB
     "jewelry", // jewelry Wild Bloom, LLC
+    "jio", // jio Affinity Names, Inc.
     "jlc", // jlc Richemont DNS Inc.
     "jll", // jll Jones Lang LaSalle Incorporated
     "jmp", // jmp Matrix IP LLC
@@ -663,6 +685,7 @@ export const genericTlds = [
     "mls", // mls The Canadian Real Estate Association
     "mma", // mma MMA IARD
     "mobi", // mobi Afilias Technologies Limited dba dotMobi
+    "mobile", // mobile Dish DBS Corporation
     "mobily", // mobily GreenTech Consultancy Company W.L.L.
     "moda", // moda United TLD Holdco Ltd.
     "moe", // moe Interlink Co., Ltd.
@@ -670,11 +693,13 @@ export const genericTlds = [
     "mom", // mom Uniregistry, Corp.
     "monash", // monash Monash University
     "money", // money Outer McCook, LLC
+    "monster", // monster Monster Worldwide, Inc.
     "montblanc", // montblanc Richemont DNS Inc.
     "mopar", // mopar FCA US LLC.
     "mormon", // mormon IRI Domain Management, LLC (&quot;Applicant&quot;)
     "mortgage", // mortgage United TLD Holdco, Ltd
     "moscow", // moscow Foundation for Assistance for Internet Technologies and Infrastructure Development (FAITID)
+    "moto", // moto Motorola Trademark Holdings, LLC
     "motorcycles", // motorcycles DERMotorcycles, LLC
     "mov", // mov Charleston Road Registry Inc.
     "movie", // movie New Frostbite, LLC
@@ -685,7 +710,7 @@ export const genericTlds = [
     "mtr", // mtr MTR Corporation Limited
     "museum", // museum Museum Domain Management Association
     "mutual", // mutual Northwestern Mutual MU TLD Registry, LLC
-    "mutuelle", // mutuelle Fédération Nationale de la Mutualité Française
+//  "mutuelle", // mutuelle Fédération Nationale de la Mutualité Française (Retired)
     "nab", // nab National Australia Bank Limited
     "nadex", // nadex Nadex Domains, Inc
     "nagoya", // nagoya GMO Registry, Inc.
@@ -701,6 +726,7 @@ export const genericTlds = [
     "network", // network Trixy Manor, LLC
     "neustar", // neustar NeuStar, Inc.
     "new", // new Charleston Road Registry Inc.
+    "newholland", // newholland CNH Industrial N.V.
     "news", // news United TLD Holdco Ltd.
     "next", // next Next plc
     "nextdirect", // nextdirect Next plc
@@ -725,6 +751,7 @@ export const genericTlds = [
     "ntt", // ntt NIPPON TELEGRAPH AND TELEPHONE CORPORATION
     "nyc", // nyc The City of New York by and through the New York City Department of Information Technology &amp; Telecommunications
     "obi", // obi OBI Group Holding SE &amp; Co. KGaA
+    "observer", // observer Top Level Spectrum, Inc.
     "off", // off Johnson Shareholdings, Inc.
     "office", // office Microsoft Corporation
     "okinawa", // okinawa BusinessRalliart inc.
@@ -744,7 +771,7 @@ export const genericTlds = [
     "orange", // orange Orange Brand Services Limited
     "org", // org Public Interest Registry (PIR)
     "organic", // organic Afilias Limited
-    "orientexpress", // orientexpress Orient Express
+//  "orientexpress", // orientexpress Orient Express (retired 2017-04-11)
     "origins", // origins The Estée Lauder Companies Inc.
     "osaka", // osaka Interlink Co., Ltd.
     "otsuka", // otsuka Otsuka Holdings Co., Ltd.
@@ -766,6 +793,7 @@ export const genericTlds = [
     "pfizer", // pfizer Pfizer Inc.
     "pharmacy", // pharmacy National Association of Boards of Pharmacy
     "philips", // philips Koninklijke Philips N.V.
+    "phone", // phone Dish DBS Corporation
     "photo", // photo Uniregistry, Corp.
     "photography", // photography Sugar Glen, LLC
     "photos", // photos Sea Corner, LLC
@@ -813,6 +841,7 @@ export const genericTlds = [
     "quest", // quest Quest ION Limited
     "qvc", // qvc QVC, Inc.
     "racing", // racing Premier Registry Limited
+    "radio", // radio European Broadcasting Union (EBU)
     "raid", // raid Johnson Shareholdings, Inc.
     "read", // read Amazon Registry Services, Inc.
     "realestate", // realestate dotRealEstate LLC
@@ -826,6 +855,7 @@ export const genericTlds = [
     "reise", // reise Foggy Way, LLC
     "reisen", // reisen New Cypress, LLC
     "reit", // reit National Association of Real Estate Investment Trusts, Inc.
+    "reliance", // reliance Reliance Industries Limited
     "ren", // ren Beijing Qianxiang Wangjing Technology Development Co., Ltd.
     "rent", // rent XYZ.COM LLC
     "rentals", // rentals Big Hollow,LLC
@@ -841,13 +871,17 @@ export const genericTlds = [
     "richardli", // richardli Pacific Century Asset Management (HK) Limited
     "ricoh", // ricoh Ricoh Company, Ltd.
     "rightathome", // rightathome Johnson Shareholdings, Inc.
+    "ril", // ril Reliance Industries Limited
     "rio", // rio Empresa Municipal de Informática SA - IPLANRIO
     "rip", // rip United TLD Holdco Ltd.
+    "rmit", // rmit Royal Melbourne Institute of Technology
     "rocher", // rocher Ferrero Trading Lux S.A.
     "rocks", // rocks United TLD Holdco, LTD.
     "rodeo", // rodeo Top Level Domain Holdings Limited
+    "rogers", // rogers Rogers Communications Canada Inc.
     "room", // room Amazon Registry Services, Inc.
     "rsvp", // rsvp Charleston Road Registry Inc.
+    "rugby", // rugby World Rugby Strategic Developments Limited
     "ruhr", // ruhr regiodot GmbH &amp; Co. KG
     "run", // run Snow Park, LLC
     "rwe", // rwe RWE AG
@@ -1036,6 +1070,7 @@ export const genericTlds = [
     "ups", // ups UPS Market Driver, Inc.
     "vacations", // vacations Atomic Tigers, LLC
     "vana", // vana Lifestyle Domain Holdings, Inc.
+    "vanguard", // vanguard The Vanguard Group, Inc.
     "vegas", // vegas Dot Vegas, Inc.
     "ventures", // ventures Binky Lake, LLC
     "verisign", // verisign VeriSign, Inc.
@@ -1058,6 +1093,7 @@ export const genericTlds = [
     "vlaanderen", // vlaanderen DNS.be vzw
     "vodka", // vodka Top Level Domain Holdings Limited
     "volkswagen", // volkswagen Volkswagen Group of America Inc.
+    "volvo", // volvo Volvo Holding Sverige Aktiebolag
     "vote", // vote Monolith Registry LLC
     "voting", // voting Valuetainment Corp.
     "voto", // voto Monolith Registry LLC
@@ -1094,6 +1130,7 @@ export const genericTlds = [
     "work", // work Top Level Domain Holdings Limited
     "works", // works Little Dynamite, LLC
     "world", // world Bitter Fields, LLC
+    "wow", // wow Amazon Registry Services, Inc.
     "wtc", // wtc World Trade Centers Association, Inc.
     "wtf", // wtf Hidden Way, LLC
     "xbox", // xbox Microsoft Corporation
@@ -1119,6 +1156,7 @@ export const genericTlds = [
     "xn--6frz82g", // 移动 Afilias Limited
     "xn--6qq986b3xl", // 我爱你 Tycoon Treasure Limited
     "xn--80adxhks", // москва Foundation for Assistance for Internet Technologies and Infrastructure Development (FAITID)
+    "xn--80aqecdr1a", // католик Pontificium Consilium de Comunicationibus Socialibus (PCCS) (Pontifical Council for Social Communication)
     "xn--80asehdb", // онлайн CORE Association
     "xn--80aswg", // сайт CORE Association
     "xn--8y0a063a", // 联通 China United Network Communications Corporation Limited
@@ -1148,6 +1186,7 @@ export const genericTlds = [
     "xn--fzys8d69uvgm", // 電訊盈科 PCCW Enterprises Limited
     "xn--g2xx48c", // 购物 Minds + Machines Group Limited
     "xn--gckr3f0f", // クラウド Amazon Registry Services, Inc.
+    "xn--gk3at1e", // 通販 Amazon Registry Services, Inc.
     "xn--hxt814e", // 网店 Zodiac Libra Limited
     "xn--i1b6b1a6a2e", // संगठन Public Interest Registry
     "xn--imr513n", // 餐厅 HU YI GLOBAL INFORMATION RESOURCES (HOLDING) COMPANY. HONGKONG LIMITED
@@ -1163,6 +1202,7 @@ export const genericTlds = [
     "xn--mgbab2bd", // بازار CORE Association
     "xn--mgbb9fbpob", // موبايلي GreenTech Consultancy Company W.L.L.
     "xn--mgbca7dzdo", // ابوظبي Abu Dhabi Systems and Information Centre
+    "xn--mgbi4ecexp", // كاثوليك Pontificium Consilium de Comunicationibus Socialibus (PCCS) (Pontifical Council for Social Communication)
     "xn--mgbt3dhd", // همراه Asia Green IT System Bilgisayar San. ve Tic. Ltd. Sti.
     "xn--mk1bu44c", // 닷컴 VeriSign Sarl
     "xn--mxtq1m", // 政府 Net-Chinese Co., Ltd.
@@ -1181,6 +1221,7 @@ export const genericTlds = [
     "xn--ses554g", // 网址 KNET Co., Ltd
     "xn--t60b56a", // 닷넷 VeriSign Sarl
     "xn--tckwe", // コム VeriSign Sarl
+    "xn--tiq49xqyj", // 天主教 Pontificium Consilium de Comunicationibus Socialibus (PCCS) (Pontifical Council for Social Communication)
     "xn--unup4y", // 游戏 Spring Fields, LLC
     "xn--vermgensberater-ctb", // VERMöGENSBERATER Deutsche Vermögensberatung Aktiengesellschaft DVAG
     "xn--vermgensberatung-pwb", // VERMöGENSBERATUNG Deutsche Vermögensberatung Aktiengesellschaft DVAG
@@ -1209,11 +1250,12 @@ export const genericTlds = [
     "zip", // zip Charleston Road Registry Inc.
     "zippo", // zippo Zadco Company
     "zone", // zone Outer Falls, LLC
-    "zuerich", // zuerich Kanton Zürich (Canton of Zurich)
+    "zuerich" // zuerich Kanton Zürich (Canton of Zurich)
 ]
 
 // WARNING: this array MUST be sorted, otherwise it cannot be searched reliably using binary search
 export const countryCodeTlds = [
+    // Taken from Version 2017042500, Last Updated Tue Apr 25 07:07:02 2017 UTC
     "ac",                 // Ascension Island
     "ad",                 // Andorra
     "ae",                 // United Arab Emirates
@@ -1222,7 +1264,7 @@ export const countryCodeTlds = [
     "ai",                 // Anguilla
     "al",                 // Albania
     "am",                 // Armenia
-//        "an",                 // Netherlands Antilles (retired)
+//  "an",                 // Netherlands Antilles (retired)
     "ao",                 // Angola
     "aq",                 // Antarctica
     "ar",                 // Argentina
@@ -1437,7 +1479,7 @@ export const countryCodeTlds = [
     "tm",                 // Turkmenistan
     "tn",                 // Tunisia
     "to",                 // Tonga
-//        "tp",                 // East Timor (Retired)
+//  "tp",                 // East Timor (Retired)
     "tr",                 // Turkey
     "tt",                 // Trinidad and Tobago
     "tv",                 // Tuvalu
@@ -1460,6 +1502,7 @@ export const countryCodeTlds = [
     "ws",                 // Samoa (formerly Western Samoa)
     "xn--3e0b707e", // 한국 KISA (Korea Internet &amp; Security Agency)
     "xn--45brj9c", // ভারত National Internet Exchange of India
+    "xn--54b7fta0cc", // বাংলা Posts and Telecommunications Division
     "xn--80ao21a", // қаз Association of IT Companies of Kazakhstan
     "xn--90a3ac", // срб Serbian National Internet Domain Registry (RNIDS)
     "xn--90ais", // ??? Reliable Software Inc.
@@ -1481,6 +1524,7 @@ export const countryCodeTlds = [
     "xn--mgb9awbf", // عمان Telecommunications Regulatory Authority (TRA)
     "xn--mgba3a4f16a", // ایران Institute for Research in Fundamental Sciences (IPM)
     "xn--mgbaam7a8h", // امارات Telecommunications Regulatory Authority (TRA)
+    "xn--mgbai9azgqp6j", // پاکستان National Telecommunication Corporation
     "xn--mgbayh7gpa", // الاردن National Information Technology Center (NITC)
     "xn--mgbbh1a71e", // بھارت National Internet Exchange of India
     "xn--mgbc0a9azcg", // المغرب Agence Nationale de Réglementation des Télécommunications (ANRT)
@@ -1507,5 +1551,5 @@ export const countryCodeTlds = [
     "yt",                 // Mayotte
     "za",                 // South Africa
     "zm",                 // Zambia
-    "zw",                 // Zimbabwe
+    "zw"                  // Zimbabwe
 ]
