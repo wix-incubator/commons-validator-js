@@ -47,6 +47,7 @@
     "lodash.includes": "^4.3.0",
     "punycode": "^1.4.1"
   },
+  "types": "index.d.ts",
   "directories": {
     "test": "test"
   }
