@@ -207,7 +207,7 @@ var CommonsValidator =
 
 	// WARNING: this array MUST be sorted, otherwise it cannot be searched reliably using binary search
 	var genericTlds = exports.genericTlds = [
-	// Taken from Version 2018031400, Last Updated Wed Mar 14 07:07:01 2018 UTC
+	// Taken from Version 2018092800, Last Updated Fri Sep 28 07:07:02 2018 UTC
 	"aaa", // aaa American Automobile Association, Inc.
 	"aarp", // aarp AARP
 	"abarth", // abarth Fiat Chrysler Automobiles N.V.
@@ -344,7 +344,7 @@ var CommonsValidator =
 	"boo", // boo Charleston Road Registry Inc.
 	"book", // book Amazon Registry Services, Inc.
 	"booking", // booking Booking.com B.V.
-	"boots", // boots THE BOOTS COMPANY PLC
+	//        "boots", // boots THE BOOTS COMPANY PLC
 	"bosch", // bosch Robert Bosch GMBH
 	"bostik", // bostik Bostik SA
 	"boston", // boston Boston TLD Management, LLC
@@ -406,11 +406,12 @@ var CommonsValidator =
 	"cfd", // cfd DOTCFD REGISTRY LTD
 	"chanel", // chanel Chanel International B.V.
 	"channel", // channel Charleston Road Registry Inc.
+	"charity", // charity Corn Lake, LLC
 	"chase", // chase JPMorgan Chase &amp; Co.
 	"chat", // chat Sand Fields, LLC
 	"cheap", // cheap Sand Cover, LLC
 	"chintai", // chintai CHINTAI Corporation
-	//  "chloe", // chloe Richemont DNS Inc. (Not assigned)
+	//        "chloe", // chloe Richemont DNS Inc. (Not assigned)
 	"christmas", // christmas Uniregistry, Corp.
 	"chrome", // chrome Charleston Road Registry Inc.
 	"chrysler", // chrysler FCA US LLC.
@@ -512,7 +513,7 @@ var CommonsValidator =
 	"dog", // dog Koko Mill, LLC
 	"doha", // doha Communications Regulatory Authority (CRA)
 	"domains", // domains Sugar Cross, LLC
-	//  "doosan", // doosan Doosan Corporation (retired)
+	//            "doosan", // doosan Doosan Corporation (retired)
 	"dot", // dot Dish DBS Corporation
 	"download", // download dot Support Limited
 	"drive", // drive Charleston Road Registry Inc.
@@ -589,7 +590,7 @@ var CommonsValidator =
 	"flir", // flir FLIR Systems, Inc.
 	"florist", // florist Half Cypress, LLC
 	"flowers", // flowers Uniregistry, Corp.
-	//  "flsmidth", // flsmidth FLSmidth A/S retired 2016-07-22
+	//        "flsmidth", // flsmidth FLSmidth A/S retired 2016-07-22
 	"fly", // fly Charleston Road Registry Inc.
 	"foo", // foo Charleston Road Registry Inc.
 	"food", // food Lifestyle Domain Holdings, Inc.
@@ -648,7 +649,7 @@ var CommonsValidator =
 	"goldpoint", // goldpoint YODOBASHI CAMERA CO.,LTD.
 	"golf", // golf Lone Falls, LLC
 	"goo", // goo NTT Resonant Inc.
-	"goodhands", // goodhands Allstate Fire and Casualty Insurance Company
+	//        "goodhands", // goodhands Allstate Fire and Casualty Insurance Company
 	"goodyear", // goodyear The Goodyear Tire &amp; Rubber Company
 	"goog", // goog Charleston Road Registry Inc.
 	"google", // google Charleston Road Registry Inc.
@@ -707,7 +708,7 @@ var CommonsValidator =
 	"house", // house Sugar Park, LLC
 	"how", // how Charleston Road Registry Inc.
 	"hsbc", // hsbc HSBC Holdings PLC
-	//  "htc", // htc HTC corporation (Not assigned)
+	//        "htc", // htc HTC corporation (Not assigned)
 	"hughes", // hughes Hughes Satellite Systems Corporation
 	"hyatt", // hyatt Hyatt GTLD, L.L.C.
 	"hyundai", // hyundai Hyundai Motor Company
@@ -717,12 +718,13 @@ var CommonsValidator =
 	"icu", // icu One.com A/S
 	"ieee", // ieee IEEE Global LLC
 	"ifm", // ifm ifm electronic gmbh
-	//  "iinet", // iinet Connect West Pty. Ltd. (Retired)
+	//        "iinet", // iinet Connect West Pty. Ltd. (Retired)
 	"ikano", // ikano Ikano S.A.
 	"imamat", // imamat Fondation Aga Khan (Aga Khan Foundation)
 	"imdb", // imdb Amazon Registry Services, Inc.
 	"immo", // immo Auburn Bloom, LLC
 	"immobilien", // immobilien United TLD Holdco Ltd.
+	"inc", // inc Intercap Holdings Inc.
 	"industries", // industries Outer House, LLC
 	"infiniti", // infiniti NISSAN MOTOR CO., LTD.
 	"info", // info Afilias Limited
@@ -745,7 +747,7 @@ var CommonsValidator =
 	"itau", // itau Itau Unibanco Holding S.A.
 	"itv", // itv ITV Services Limited
 	"iveco", // iveco CNH Industrial N.V.
-	"iwc", // iwc Richemont DNS Inc.
+	//        "iwc", // iwc Richemont DNS Inc.
 	"jaguar", // jaguar Jaguar Land Rover Ltd
 	"java", // java Oracle Corporation
 	"jcb", // jcb JCB Co., Ltd.
@@ -754,7 +756,7 @@ var CommonsValidator =
 	"jetzt", // jetzt New TLD Company AB
 	"jewelry", // jewelry Wild Bloom, LLC
 	"jio", // jio Affinity Names, Inc.
-	"jlc", // jlc Richemont DNS Inc.
+	//        "jlc", // jlc Richemont DNS Inc.
 	"jll", // jll Jones Lang LaSalle Incorporated
 	"jmp", // jmp Matrix IP LLC
 	"jnj", // jnj Johnson &amp; Johnson Services, Inc.
@@ -828,6 +830,7 @@ var CommonsValidator =
 	"live", // live United TLD Holdco Ltd.
 	"living", // living Lifestyle Domain Holdings, Inc.
 	"lixil", // lixil LIXIL Group Corporation
+	"llc", // llc Afilias plc
 	"loan", // loan dot Loan Limited
 	"loans", // loans June Woods, LLC
 	"locker", // locker Dish DBS Corporation
@@ -863,8 +866,8 @@ var CommonsValidator =
 	"maserati", // maserati Fiat Chrysler Automobiles N.V.
 	"mattel", // mattel Mattel Sites, Inc.
 	"mba", // mba Lone Hollow, LLC
-	//  "mcd", // mcd McDonald’s Corporation (Not assigned)
-	//  "mcdonalds", // mcdonalds McDonald’s Corporation (Not assigned)
+	//        "mcd", // mcd McDonald’s Corporation (Not assigned)
+	//        "mcdonalds", // mcdonalds McDonald’s Corporation (Not assigned)
 	"mckinsey", // mckinsey McKinsey Holdings, Inc.
 	"med", // med Medistry LLC
 	"media", // media Grand Glen, LLC
@@ -874,7 +877,7 @@ var CommonsValidator =
 	"memorial", // memorial Dog Beach, LLC
 	"men", // men Exclusive Registry Limited
 	"menu", // menu Wedding TLD2, LLC
-	"meo", // meo PT Comunicacoes S.A.
+	//        "meo", // meo PT Comunicacoes S.A.
 	"merckmsd", // merckmsd MSD Registry Holdings, Inc.
 	"metlife", // metlife MetLife Services and Solutions, LLC
 	"miami", // miami Top Level Domain Holdings Limited
@@ -897,7 +900,7 @@ var CommonsValidator =
 	"monash", // monash Monash University
 	"money", // money Outer McCook, LLC
 	"monster", // monster Monster Worldwide, Inc.
-	//  "montblanc", // montblanc Richemont DNS Inc. (Not assigned)
+	//        "montblanc", // montblanc Richemont DNS Inc. (Not assigned)
 	"mopar", // mopar FCA US LLC.
 	"mormon", // mormon IRI Domain Management, LLC (&quot;Applicant&quot;)
 	"mortgage", // mortgage United TLD Holdco, Ltd
@@ -909,11 +912,11 @@ var CommonsValidator =
 	"movistar", // movistar Telefónica S.A.
 	"msd", // msd MSD Registry Holdings, Inc.
 	"mtn", // mtn MTN Dubai Limited
-	//  "mtpc", // mtpc Mitsubishi Tanabe Pharma Corporation (Retired)
+	//        "mtpc", // mtpc Mitsubishi Tanabe Pharma Corporation (Retired)
 	"mtr", // mtr MTR Corporation Limited
 	"museum", // museum Museum Domain Management Association
 	"mutual", // mutual Northwestern Mutual MU TLD Registry, LLC
-	//  "mutuelle", // mutuelle Fédération Nationale de la Mutualité Française (Retired)
+	//        "mutuelle", // mutuelle Fédération Nationale de la Mutualité Française (Retired)
 	"nab", // nab National Australia Bank Limited
 	"nadex", // nadex Nadex Domains, Inc
 	"nagoya", // nagoya GMO Registry, Inc.
@@ -974,16 +977,16 @@ var CommonsValidator =
 	"orange", // orange Orange Brand Services Limited
 	"org", // org Public Interest Registry (PIR)
 	"organic", // organic Afilias Limited
-	//  "orientexpress", // orientexpress Orient Express (retired 2017-04-11)
+	//        "orientexpress", // orientexpress Orient Express (retired 2017-04-11)
 	"origins", // origins The Estée Lauder Companies Inc.
 	"osaka", // osaka Interlink Co., Ltd.
 	"otsuka", // otsuka Otsuka Holdings Co., Ltd.
 	"ott", // ott Dish DBS Corporation
 	"ovh", // ovh OVH SAS
 	"page", // page Charleston Road Registry Inc.
-	//  "pamperedchef", // pamperedchef The Pampered Chef, Ltd. (Not assigned)
+	//        "pamperedchef", // pamperedchef The Pampered Chef, Ltd. (Not assigned)
 	"panasonic", // panasonic Panasonic Corporation
-	"panerai", // panerai Richemont DNS Inc.
+	//        "panerai", // panerai Richemont DNS Inc.
 	"paris", // paris City of Paris
 	"pars", // pars Asia Green IT System Bilgisayar San. ve Tic. Ltd. Sti.
 	"partners", // partners Magic Glen, LLC
@@ -1102,7 +1105,7 @@ var CommonsValidator =
 	"sandvikcoromant", // sandvikcoromant Sandvik AB
 	"sanofi", // sanofi Sanofi
 	"sap", // sap SAP AG
-	"sapo", // sapo PT Comunicacoes S.A.
+	//        "sapo", // sapo PT Comunicacoes S.A.
 	"sarl", // sarl Delta Orchard, LLC
 	"sas", // sas Research IP LLC
 	"save", // save Amazon Registry Services, Inc.
@@ -1222,7 +1225,7 @@ var CommonsValidator =
 	"tech", // tech Dot Tech LLC
 	"technology", // technology Auburn Falls, LLC
 	"tel", // tel Telnic Ltd.
-	"telecity", // telecity TelecityGroup International Limited
+	//        "telecity", // telecity TelecityGroup International Limited
 	"telefonica", // telefonica Telefónica S.A.
 	"temasek", // temasek Temasek Holdings (Private) Limited
 	"tennis", // tennis Cotton Bloom, LLC
@@ -1292,7 +1295,7 @@ var CommonsValidator =
 	"virgin", // virgin Virgin Enterprises Limited
 	"visa", // visa Visa Worldwide Pte. Limited
 	"vision", // vision Koko Station, LLC
-	"vista", // vista Vistaprint Limited
+	//        "vista", // vista Vistaprint Limited
 	"vistaprint", // vistaprint Vistaprint Limited
 	"viva", // viva Saudi Telecom Company
 	"vivo", // vivo Telefonica Brasil S.A.
@@ -1440,7 +1443,7 @@ var CommonsValidator =
 	"xn--w4rs40l", // 嘉里 Kerry Trading Co. Limited
 	"xn--xhq521b", // 广东 Guangzhou YU Wei Information Technology Co., Ltd.
 	"xn--zfr164b", // 政务 China Organizational Name Administration Center
-	"xperia", // xperia Sony Mobile Communications AB
+	//        "xperia", // xperia Sony Mobile Communications AB
 	"xxx", // xxx ICM Registry LLC
 	"xyz", // xyz XYZ.COM LLC
 	"yachts", // yachts DERYachts, LLC
