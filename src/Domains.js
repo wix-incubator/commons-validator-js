@@ -1,6 +1,7 @@
 "use strict"
 
 /** Ported from org.apache.commons.validator.routines.DomainValidator */
+/** https://github.com/apache/commons-validator/blob/master/src/main/java/org/apache/commons/validator/routines/DomainValidator.java */
 
 // WARNING: this array MUST be sorted, otherwise it cannot be searched reliably using binary search
 export const infrastructureTlds = [
