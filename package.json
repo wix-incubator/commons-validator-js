@@ -38,9 +38,7 @@
     "chai": "^3.5.0",
     "mocha": "^3.0.2",
     "webpack": "^1.13.0",
-    "uglify-js": "^3.0.10",
-    "wnpm-ci": "*",
-    "bower-auto-release": "*"
+    "uglify-js": "^3.0.10"
   },
   "publishConfig": {
     "registry": "https://registry.npmjs.org/"
