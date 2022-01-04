@@ -263,6 +263,7 @@ export const genericTlds = [
     "coupon", // coupon Amazon Registry Services, Inc.
     "coupons", // coupons Black Island, LLC
     "courses", // courses OPEN UNIVERSITIES AUSTRALIA PTY LTD
+    "cpa", // cpa American Institute of Certified Public Accountants
     "credit", // credit Snow Shadow, LLC
     "creditcard", // creditcard Binky Frostbite, LLC
     "creditunion", // creditunion CUNA Performance Resources, LLC
