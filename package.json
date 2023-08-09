@@ -1,6 +1,6 @@
 {
   "name": "commons-validator-js",
-  "version": "1.0.78",
+  "version": "1.0.1338",
   "description": "JavaScript port of Apache Commons Validator",
   "main": "dist/index.js",
   "scripts": {
@@ -9,7 +9,7 @@
     "compile-library": "webpack --output-library CommonsValidator --output-library-target var dist bin/commons-validator-js.src.js",
     "prepublish": "npm test && npm run compile && npm run compile-library",
     "build": "babel bin/commons-validator-js.src.js | uglifyjs > bin/commons-validator-js.js",
-    "release": "npm install wnpm-ci && wnpm-release -- --no-shrinkwrap && npm install bower-auto-release && bower-auto-release --dist bin"
+    "release": "npx wnpm-release -- --no-shrinkwrap && npx bower-auto-release --dist bin"
   },
   "repository": {
     "type": "git",
