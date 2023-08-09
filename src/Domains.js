@@ -28,7 +28,7 @@ export const genericTlds = [
     "aco", // aco ACO Severin Ahlmann GmbH &amp; Co. KG
     //        "active", // active The Active Network, Inc
     "actor", // actor United TLD Holdco Ltd.
-    "adac", // adac Allgemeiner Deutscher Automobil-Club e.V. (ADAC)
+    "adac", /// adac Allgemeiner Deutscher Automobil-Club e.V. (ADAC)
     "ads", // ads Charleston Road Registry Inc.
     "adult", // adult ICM Registry AD LLC
     "aeg", // aeg Aktiebolaget Electrolux
