@@ -722,6 +722,7 @@ export const genericTlds = [
     //        "mtpc", // mtpc Mitsubishi Tanabe Pharma Corporation (Retired)
     "mtr", // mtr MTR Corporation Limited
     "museum", // museum Museum Domain Management Association
+    "music", // music DotMusic Limited
     "mutual", // mutual Northwestern Mutual MU TLD Registry, LLC
     //        "mutuelle", // mutuelle Fédération Nationale de la Mutualité Française (Retired)
     "nab", // nab National Australia Bank Limited
