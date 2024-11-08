@@ -44,7 +44,7 @@
   },
   "dependencies": {
     "lodash.includes": "^4.3.0",
-    "punycode": "^1.4.1"
+    "punycode": "^2.3.1"
   },
   "types": "src/index.d.ts",
   "directories": {
