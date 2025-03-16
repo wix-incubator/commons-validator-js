@@ -1583,5 +1583,6 @@ export const countryCodeTlds = [
     "yt",                 // Mayotte
     "za",                 // South Africa
     "zm",                 // Zambia
-    "zw"                  // Zimbabwe
+    "zw",                  // Zimbabwe
+    "ss"                  // South Sudan 
 ]
