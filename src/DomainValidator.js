@@ -1,8 +1,8 @@
 "use strict"
 
-import * as Domains from "./Domains"
 import includes from 'lodash.includes'
-import * as punycode from 'punycode'
+import * as punycode from 'punycode/'
+import * as Domains from './Domains'
 
 export class DomainValidator {
 	/**
@@ -47,7 +47,7 @@ export class DomainValidator {
 		if (!domain) {
 			return false
 		}
-		
+
 		domain = this._unicodeToASCII(domain)
 		if (domain.length > 253) {
 			return false
@@ -62,7 +62,7 @@ export class DomainValidator {
 		if (!domain) {
 			return false
 		}
-		
+
 		domain = this._unicodeToASCII(domain)
 		if (domain.length > 253) {
 			return false
